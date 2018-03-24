@@ -62,7 +62,7 @@ class Place {
         _places.remove(place);
     }
 
-    static UpdateDescription(id, description) {
+    static updateDescription(id, description) {
         return Place.updateValue(id, place => {
             place.description = description || place.description;
         });

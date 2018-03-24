@@ -7,9 +7,10 @@ const _storage = new LokiDb();
 const _places = _storage.addCollection('places');
 
 class Place {
-    constructor({ description, isVisited }) {
+    constructor({ description, isVisited, $loki}) {
         this.isVisited = isVisited || false;
         this.description = description;
+        this.id = $loki
     }
 
     static swap(placeIndex1, placeIndex2) {

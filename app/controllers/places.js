@@ -15,7 +15,7 @@ exports.list = (req, res) => {
 exports.create = (req, res) => {
     const place = new Place(req.body);
     Place.add(place);
-    res.sendStatus(200);
+    res.json(place);
 };
 
 exports.deleteById = (req, res) => {
